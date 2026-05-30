@@ -43,9 +43,9 @@ TICKET_EXPIRY_MINUTES = 120  # 2 hours before ticket expires
 WINDOW_WIDTH = 1200
 WINDOW_HEIGHT = 700
 
-# Admin credentials (for demo purposes - use proper authentication in production)
-ADMIN_USERNAME = 'admin'
-ADMIN_PASSWORD = 'admin123'
+# Admin credentials - use environment variables in production
+ADMIN_USERNAME = os.getenv('ADMIN_USERNAME', 'admin')
+ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD', '')
 
 # Departments/Counters
 DEPARTMENTS = ['Counter 1', 'Counter 2', 'Counter 3', 'General Service']
